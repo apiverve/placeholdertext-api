@@ -1,0 +1,60 @@
+/**
+ * Placeholder Text Generator API - Basic Usage Example
+ *
+ * This example demonstrates the basic usage of the Placeholder Text Generator API.
+ * API Documentation: https://docs.apiverve.com/ref/placeholdertext
+ */
+
+const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
+const API_URL = 'https://api.apiverve.com/v1/placeholdertext';
+
+/**
+ * Make a GET request to the Placeholder Text Generator API
+ */
+async function callPlaceholderTextGeneratorAPI() {
+  try {
+    // Query parameters
+    const params &#x3D; new URLSearchParams({
+            style: &#x27;tech&#x27;,
+            paragraphs: 3,
+            sentences: 5
+        });
+
+    const response = await fetch(`${API_URL}?${params}`, {
+      method: 'GET',
+      headers: {
+        'x-api-key': API_KEY
+      }
+    });
+
+    // Check if response is successful
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    // Check API response status
+    if (data.status === 'ok') {
+      console.log('✓ Success!');
+      console.log('Response data:', data.data);
+      return data.data;
+    } else {
+      console.error('✗ API Error:', data.error || 'Unknown error');
+      return null;
+    }
+
+  } catch (error) {
+    console.error('✗ Request failed:', error.message);
+    return null;
+  }
+}
+
+// Run the example
+callPlaceholderTextGeneratorAPI()
+  .then(result => {
+    if (result) {
+      console.log('\n📊 Final Result:');
+      console.log(JSON.stringify(result, null, 2));
+    }
+  });
