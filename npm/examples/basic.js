@@ -15,7 +15,7 @@ const api = new placeholdertextAPI({
 
 // Example query
 var query = {
-  style: "tech",
+  style: "lorem",
   paragraphs: 3,
   sentences: 5
 };
