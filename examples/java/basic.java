@@ -12,14 +12,8 @@ public class BasicExample {
         PlaceholderTextGeneratorAPIClient client = new PlaceholderTextGeneratorAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Query parameters
-            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
-        parameters.put(&quot;style&quot;, &quot;tech&quot;);
-        parameters.put(&quot;paragraphs&quot;, 3);
-        parameters.put(&quot;sentences&quot;, 5);
-
-            // Execute the API request
-            APIResponse response = client.execute(parameters);
+            // Execute the API request (no parameters required)
+            APIResponse response = client.execute(null);
 
             // Check if the request was successful
             if (response.isSuccess()) {
