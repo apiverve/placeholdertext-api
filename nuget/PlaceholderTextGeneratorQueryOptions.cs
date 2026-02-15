@@ -11,22 +11,19 @@ namespace APIVerve.API.PlaceholderTextGenerator
     public class PlaceholderTextGeneratorQueryOptions
     {
         /// <summary>
-        /// The style of placeholder text (lorem, tech, hipster, corporate, pirate, fantasy, scifi)
-        /// Example: tech
+        /// The style of placeholder text
         /// </summary>
         [JsonProperty("style")]
         public string Style { get; set; }
 
         /// <summary>
-        /// Number of paragraphs to generate (1-20)
-        /// Example: 3
+        /// Number of paragraphs to generate
         /// </summary>
         [JsonProperty("paragraphs")]
         public string Paragraphs { get; set; }
 
         /// <summary>
-        /// Number of sentences per paragraph (1-15)
-        /// Example: 5
+        /// Number of sentences per paragraph
         /// </summary>
         [JsonProperty("sentences")]
         public string Sentences { get; set; }
