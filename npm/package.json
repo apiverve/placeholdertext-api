@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/placeholdertext",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Placeholder Text Generator is a tool for generating placeholder text in various styles including lorem ipsum, tech jargon, hipster, corporate, pirate, fantasy, and sci-fi.",
   "main": "index.js",
   "types": "index.d.ts",
