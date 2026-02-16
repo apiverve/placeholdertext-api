@@ -44,7 +44,11 @@ from apiverve_placeholdertextgenerator.apiClient import PlaceholdertextAPIClient
 # Initialize the client with your APIVerve API key
 api = PlaceholdertextAPIClient("[YOUR_API_KEY]")
 
-query = { "style": "lorem", "paragraphs": 3, "sentences": 5 }
+query = {
+    "style": "lorem",
+    "paragraphs": 3,
+    "sentences": 5
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "style": "lorem", "paragraphs": 3, "sentences": 5 }
+query = {
+    "style": "lorem",
+    "paragraphs": 3,
+    "sentences": 5
+}
 ```
 
 ###### Simple Request
@@ -140,7 +148,11 @@ from apiverve_placeholdertextgenerator.apiClient import PlaceholdertextAPIClient
 
 api = PlaceholdertextAPIClient("[YOUR_API_KEY]")
 
-query = { "style": "lorem", "paragraphs": 3, "sentences": 5 }
+query = {
+    "style": "lorem",
+    "paragraphs": 3,
+    "sentences": 5
+}
 
 try:
     result = api.execute(query)
@@ -161,7 +173,11 @@ from apiverve_placeholdertextgenerator.apiClient import PlaceholdertextAPIClient
 
 api = PlaceholdertextAPIClient("[YOUR_API_KEY]")
 
-query = { "style": "lorem", "paragraphs": 3, "sentences": 5 }
+query = {
+    "style": "lorem",
+    "paragraphs": 3,
+    "sentences": 5
+}
 
 try:
     result = api.execute(query)
@@ -195,7 +211,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_placeholdertextgenerator.apiClient import PlaceholdertextAPIClient, PlaceholdertextAPIClientError
 
-query = { "style": "lorem", "paragraphs": 3, "sentences": 5 }
+query = {
+    "style": "lorem",
+    "paragraphs": 3,
+    "sentences": 5
+}
 
 # Using context manager ensures proper cleanup
 with PlaceholdertextAPIClient("[YOUR_API_KEY]") as api:
@@ -221,7 +241,11 @@ from apiverve_placeholdertextgenerator.apiClient import PlaceholdertextAPIClient
 # Enable debug mode
 api = PlaceholdertextAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "style": "lorem", "paragraphs": 3, "sentences": 5 }
+query = {
+    "style": "lorem",
+    "paragraphs": 3,
+    "sentences": 5
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -236,8 +260,13 @@ from apiverve_placeholdertextgenerator.apiClient import PlaceholdertextAPIClient
 
 api = PlaceholdertextAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "style": "lorem",
+    "paragraphs": 3,
+    "sentences": 5
+}
+
 try:
-    query = { "style": "lorem", "paragraphs": 3, "sentences": 5 }
     result = api.execute(query)
     print(result)
 finally:
