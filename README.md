@@ -30,7 +30,13 @@ The Placeholder Text Generator API provides a simple, reliable way to integrate 
 ```javascript
 async function callPlaceholderTextGeneratorAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/placeholdertext', {
+        const params = new URLSearchParams({
+            style: 'tech',
+            paragraphs: 3,
+            sentences: 5
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/placeholdertext?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +56,7 @@ callPlaceholderTextGeneratorAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/placeholdertext?param=value" \
+curl -X GET "https://api.apiverve.com/v1/placeholdertext?style=tech&paragraphs=3&sentences=5" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +156,7 @@ go get github.com/apiverve/placeholdertext-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +175,7 @@ go get github.com/apiverve/placeholdertext-api/go
 The Placeholder Text Generator API is commonly used for:
 
 - **Web Applications** - Add placeholder text generator features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with placeholder text generator capabilities
 - **Data Pipelines** - Process and analyze data at scale
