@@ -51,7 +51,7 @@ Here's a simple example to get you started quickly:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.PlaceholderTextGenerator;
 
 class Program
 {
@@ -60,10 +60,10 @@ class Program
         // Initialize the API client
         var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    style = "lorem",
-    paragraphs = 3,
-    sentences = 5
+        var queryOptions = new PlaceholderTextGeneratorQueryOptions {
+    Style = "lorem",
+    Paragraphs = 3,
+    Sentences = 5
 };
 
         // Make the API call
@@ -118,7 +118,7 @@ The modern async/await pattern provides the best performance and code readabilit
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.PlaceholderTextGenerator;
 
 public class Example
 {
@@ -126,10 +126,10 @@ public class Example
     {
         var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    style = "lorem",
-    paragraphs = 3,
-    sentences = 5
+        var queryOptions = new PlaceholderTextGeneratorQueryOptions {
+    Style = "lorem",
+    Paragraphs = 3,
+    Sentences = 5
 };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -152,7 +152,7 @@ If you need to use synchronous code, you can use the `Execute` method:
 
 ```csharp
 using System;
-using APIVerve;
+using APIVerve.API.PlaceholderTextGenerator;
 
 public class Example
 {
@@ -160,10 +160,10 @@ public class Example
     {
         var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    style = "lorem",
-    paragraphs = 3,
-    sentences = 5
+        var queryOptions = new PlaceholderTextGeneratorQueryOptions {
+    Style = "lorem",
+    Paragraphs = 3,
+    Sentences = 5
 };
 
         var response = apiClient.Execute(queryOptions);
@@ -191,7 +191,7 @@ The API client provides comprehensive error handling. Here are some examples:
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.PlaceholderTextGenerator;
 
 public class Example
 {
@@ -199,10 +199,10 @@ public class Example
     {
         var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 
-        var queryOptions = new QueryOptions {
-    style = "lorem",
-    paragraphs = 3,
-    sentences = 5
+        var queryOptions = new PlaceholderTextGeneratorQueryOptions {
+    Style = "lorem",
+    Paragraphs = 3,
+    Sentences = 5
 };
 
         try
@@ -245,7 +245,7 @@ public class Example
 ```csharp
 using System;
 using System.Threading.Tasks;
-using APIVerve;
+using APIVerve.API.PlaceholderTextGenerator;
 
 public class Example
 {
@@ -257,10 +257,10 @@ public class Example
         apiClient.SetMaxRetries(3);        // Retry up to 3 times (default: 0, max: 3)
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
-        var queryOptions = new QueryOptions {
-    style = "lorem",
-    paragraphs = 3,
-    sentences = 5
+        var queryOptions = new PlaceholderTextGeneratorQueryOptions {
+    Style = "lorem",
+    Paragraphs = 3,
+    Sentences = 5
 };
 
         try
@@ -300,10 +300,10 @@ var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
-var queryOptions = new QueryOptions {
-    style = "lorem",
-    paragraphs = 3,
-    sentences = 5
+var queryOptions = new PlaceholderTextGeneratorQueryOptions {
+    Style = "lorem",
+    Paragraphs = 3,
+    Sentences = 5
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -328,10 +328,10 @@ apiClient.SetLogger(message =>
     Console.WriteLine($"[LOG] {DateTime.Now:yyyy-MM-dd HH:mm:ss} - {message}");
 });
 
-var queryOptions = new QueryOptions {
-    style = "lorem",
-    paragraphs = 3,
-    sentences = 5
+var queryOptions = new PlaceholderTextGeneratorQueryOptions {
+    Style = "lorem",
+    Paragraphs = 3,
+    Sentences = 5
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -348,10 +348,10 @@ var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3)
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
-var queryOptions = new QueryOptions {
-    style = "lorem",
-    paragraphs = 3,
-    sentences = 5
+var queryOptions = new PlaceholderTextGeneratorQueryOptions {
+    Style = "lorem",
+    Paragraphs = 3,
+    Sentences = 5
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -362,10 +362,10 @@ var response = await apiClient.ExecuteAsync(queryOptions);
 The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
-var queryOptions = new QueryOptions {
-    style = "lorem",
-    paragraphs = 3,
-    sentences = 5
+var queryOptions = new PlaceholderTextGeneratorQueryOptions {
+    Style = "lorem",
+    Paragraphs = 3,
+    Sentences = 5
 };
 
 using (var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]"))
@@ -387,25 +387,16 @@ using (var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]"))
   "data": {
     "style": "tech",
     "paragraphs": [
-      "Neural compiler iteration sprint cache kubernetes package database microservice encryption SDK JSON algorithm algorithm. Variable hardware load balancer protocol load balancer. Hardware middleware latency iteration neural package debugging query neural. DevOps backend compiler module container XML iteration stack encryption SDK. Middleware blockchain CI/CD debugging framework package virtualization bandwidth.",
-      "SDK interface CI/CD git debugging interface REST middleware frontend typescript microservice query. Load balancer repository deployment microservice sprint sprint stack interface XML javascript hardware dependency. Dependency scalability deployment algorithm javascript runtime webhook interface server. Latency protocol refactor scalability refactor container deployment runtime throughput cache. Repository module runtime CI/CD hardware XML refactor cache backend middleware interface agile algorithm package algorithm.",
-      "Framework debugging middleware compiler load balancer debugging bandwidth stack. Virtualization javascript protocol package debugging query agile scalability stack CI/CD. Deployment frontend webhook algorithm runtime runtime stack optimization. CI/CD iteration blockchain API load balancer stack variable throughput encryption algorithm middleware git javascript protocol. Encryption git module DevOps latency server."
+      "Docker latency interface debugging API git protocol module REST latency. DevOps API optimization javascript variable cache query blockchain. Scalability typescript API throughput typescript package refactor microservice blockchain docker compiler typescript. Algorithm query throughput scalability scalability microservice. DevOps algorithm XML throughput framework optimization API deployment docker deployment query sprint refactor stack.",
+      "Neural deployment hardware bandwidth protocol stack variable algorithm iteration throughput algorithm kubernetes repository. Frontend server stack javascript CI/CD container module latency load balancer compiler cache DevOps. Server DevOps kubernetes bandwidth REST agile neural module repository. Database protocol stack bandwidth scalability optimization load balancer backend. Debugging DevOps webhook REST stack protocol hardware blockchain docker server agile microservice.",
+      "Backend javascript throughput docker javascript stack debugging algorithm microservice cloud REST compiler DevOps runtime middleware. Deployment load balancer javascript query SDK bandwidth refactor typescript runtime throughput stack virtualization algorithm server. Backend cloud sprint latency repository microservice API hardware virtualization cache git. Middleware sprint module compiler query encryption debugging backend docker throughput microservice. Compiler variable latency iteration compiler frontend package agile microservice latency throughput API compiler XML DevOps."
     ],
     "paragraph_count": 3,
     "sentences_per_paragraph": 5,
     "total_sentences": 15,
-    "total_words": 155,
-    "total_characters": 1350,
-    "full_text": "Neural compiler iteration sprint cache kubernetes package database microservice encryption SDK JSON algorithm algorithm. Variable hardware load balancer protocol load balancer. Hardware middleware latency iteration neural package debugging query neural. DevOps backend compiler module container XML iteration stack encryption SDK. Middleware blockchain CI/CD debugging framework package virtualization bandwidth.\n\nSDK interface CI/CD git debugging interface REST middleware frontend typescript microservice query. Load balancer repository deployment microservice sprint sprint stack interface XML javascript hardware dependency. Dependency scalability deployment algorithm javascript runtime webhook interface server. Latency protocol refactor scalability refactor container deployment runtime throughput cache. Repository module runtime CI/CD hardware XML refactor cache backend middleware interface agile algorithm package algorithm.\n\nFramework debugging middleware compiler load balancer debugging bandwidth stack. Virtualization javascript protocol package debugging query agile scalability stack CI/CD. Deployment frontend webhook algorithm runtime runtime stack optimization. CI/CD iteration blockchain API load balancer stack variable throughput encryption algorithm middleware git javascript protocol. Encryption git module DevOps latency server.",
-    "available_styles": [
-      "lorem",
-      "tech",
-      "hipster",
-      "corporate",
-      "pirate",
-      "fantasy",
-      "scifi"
-    ]
+    "total_words": 173,
+    "total_characters": 1503,
+    "full_text": "Docker latency interface debugging API git protocol module REST latency. DevOps API optimization javascript variable cache query blockchain. Scalability typescript API throughput typescript package refactor microservice blockchain docker compiler typescript. Algorithm query throughput scalability scalability microservice. DevOps algorithm XML throughput framework optimization API deployment docker deployment query sprint refactor stack.\n\nNeural deployment hardware bandwidth protocol stack variable algorithm iteration throughput algorithm kubernetes repository. Frontend server stack javascript CI/CD container module latency load balancer compiler cache DevOps. Server DevOps kubernetes bandwidth REST agile neural module repository. Database protocol stack bandwidth scalability optimization load balancer backend. Debugging DevOps webhook REST stack protocol hardware blockchain docker server agile microservice.\n\nBackend javascript throughput docker javascript stack debugging algorithm microservice cloud REST compiler DevOps runtime middleware. Deployment load balancer javascript query SDK bandwidth refactor typescript runtime throughput stack virtualization algorithm server. Backend cloud sprint latency repository microservice API hardware virtualization cache git. Middleware sprint module compiler query encryption debugging backend docker throughput microservice. Compiler variable latency iteration compiler frontend package agile microservice latency throughput API compiler XML DevOps."
   }
 }
 ```
