@@ -20,12 +20,12 @@ namespace APIVerve.API.PlaceholderTextGenerator
         /// Number of paragraphs to generate
         /// </summary>
         [JsonProperty("paragraphs")]
-        public string Paragraphs { get; set; }
+        public int? Paragraphs { get; set; }
 
         /// <summary>
         /// Number of sentences per paragraph
         /// </summary>
         [JsonProperty("sentences")]
-        public string Sentences { get; set; }
+        public int? Sentences { get; set; }
     }
 }
