@@ -25,6 +25,9 @@ namespace APIVerve.API.PlaceholderTextGenerator
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -36,24 +39,33 @@ namespace APIVerve.API.PlaceholderTextGenerator
         public string[] Paragraphs { get; set; }
 
         [JsonProperty("paragraph_count")]
-        public long ParagraphCount { get; set; }
+        public long? ParagraphCount { get; set; }
 
         [JsonProperty("sentences_per_paragraph")]
-        public long SentencesPerParagraph { get; set; }
+        public long? SentencesPerParagraph { get; set; }
 
         [JsonProperty("total_sentences")]
-        public long TotalSentences { get; set; }
+        public long? TotalSentences { get; set; }
 
         [JsonProperty("total_words")]
-        public long TotalWords { get; set; }
+        public long? TotalWords { get; set; }
 
         [JsonProperty("total_characters")]
-        public long TotalCharacters { get; set; }
+        public long? TotalCharacters { get; set; }
 
         [JsonProperty("full_text")]
         public string FullText { get; set; }
+    }
 
-        [JsonProperty("available_styles")]
-        public string[] AvailableStyles { get; set; }
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
