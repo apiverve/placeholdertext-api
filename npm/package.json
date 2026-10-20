@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/placeholdertext",
-  "version": "1.2.0",
-  "description": "Placeholder Text Generator is a tool for generating placeholder text in various styles including lorem ipsum, tech jargon, hipster, corporate, pirate, fantasy, and sci-fi.",
+  "version": "1.2.2",
+  "description": "Placeholder Text Generator creates custom placeholder text and dummy copy across themes like lorem ipsum, tech, and corporate. Set the paragraph count, sentences per paragraph, and style to receive an array of generated text blocks.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -23,7 +23,7 @@
     "directory": "npm"
   },
   "keywords": [
-    "placeholder text", "lorem ipsum", "dummy text", "filler text", "sample text"
+    "text placeholder api", "placeholder text api", "placeholder text generator api", "dummy text api", "placeholder text"
   ],
   "author": {
     "name": "APIVerve",
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/placeholdertext-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/placeholdertext?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/placeholdertext?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
