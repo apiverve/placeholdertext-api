@@ -1,13 +1,12 @@
-PlaceholderTextGenerator API
+Placeholder Text Generator API
 ============
 
-Placeholder Text Generator is a tool for generating placeholder text in various styles including lorem ipsum, tech jargon, hipster, corporate, pirate, fantasy, and sci-fi.
+Placeholder Text Generator creates custom placeholder text and dummy copy across themes like lorem ipsum, tech, and corporate. Set the paragraph count, sentences per paragraph, and style to receive an array of generated text blocks.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [PlaceholderTextGenerator API](https://apiverve.com/marketplace/placeholdertext?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.PlaceholderTextGenerator.svg)](https://www.nuget.org/packages/APIVerve.API.PlaceholderTextGenerator)
+
+This is a .NET wrapper for the [Placeholder Text Generator API](https://apiverve.com/marketplace/placeholdertext?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the placeholdertext API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Placeholder Text Generator API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,10 +60,10 @@ class Program
         var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new PlaceholderTextGeneratorQueryOptions {
-    Style = "lorem",
-    Paragraphs = 3,
-    Sentences = 5
-};
+            Style = "lorem",
+            Paragraphs = 3,
+            Sentences = 5
+        };
 
         // Make the API call
         try
@@ -94,13 +93,13 @@ class Program
 
 ## Usage
 
-The PlaceholderTextGenerator API documentation is found here: [https://docs.apiverve.com/ref/placeholdertext](https://docs.apiverve.com/ref/placeholdertext?utm_source=nuget&utm_medium=readme).
+The Placeholder Text Generator API documentation is found here: [https://docs.apiverve.com/ref/placeholdertext](https://docs.apiverve.com/ref/placeholdertext?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-PlaceholderTextGenerator API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Placeholder Text Generator API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -127,10 +126,10 @@ public class Example
         var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new PlaceholderTextGeneratorQueryOptions {
-    Style = "lorem",
-    Paragraphs = 3,
-    Sentences = 5
-};
+            Style = "lorem",
+            Paragraphs = 3,
+            Sentences = 5
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -161,10 +160,10 @@ public class Example
         var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new PlaceholderTextGeneratorQueryOptions {
-    Style = "lorem",
-    Paragraphs = 3,
-    Sentences = 5
-};
+            Style = "lorem",
+            Paragraphs = 3,
+            Sentences = 5
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -200,10 +199,10 @@ public class Example
         var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new PlaceholderTextGeneratorQueryOptions {
-    Style = "lorem",
-    Paragraphs = 3,
-    Sentences = 5
-};
+            Style = "lorem",
+            Paragraphs = 3,
+            Sentences = 5
+        };
 
         try
         {
@@ -258,10 +257,10 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new PlaceholderTextGeneratorQueryOptions {
-    Style = "lorem",
-    Paragraphs = 3,
-    Sentences = 5
-};
+            Style = "lorem",
+            Paragraphs = 3,
+            Sentences = 5
+        };
 
         try
         {
@@ -405,7 +404,7 @@ using (var apiClient = new PlaceholderTextGeneratorAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -416,12 +415,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
