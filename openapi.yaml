@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Placeholder Text Generator
   description: >-
-    Placeholder Text Generator is a tool for generating placeholder text in
-    various styles including lorem ipsum, tech jargon, hipster, corporate,
-    pirate, fantasy, and sci-fi.
+    Placeholder Text Generator creates custom placeholder text and dummy copy
+    across themes like lorem ipsum, tech, and corporate. Set the paragraph
+    count, sentences per paragraph, and style to receive an array of generated
+    text blocks.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/placeholdertext:
     get:
-      summary: Generate Placeholder Text
+      summary: Placeholder Text Generator
       description: Generate placeholder text in various styles
       operationId: placeholdertext
       parameters:
